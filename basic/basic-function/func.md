@@ -1,0 +1,4 @@
+## 중요한 내용
+**void:** 함수의 반환값이 없는 경우(undefined인 경우), 리턴 타입을 void로 설정한다. 특이한 점은 타입스크립트 컴파일러가 void와 undefined를 다르게 인식한다는 점이다. js에서는 함수 내에서 return문을 명시하지 않은 경우, 자동으로 undefined를 반환한다. 그래서 void가 undefined와 똑같다고 생각하기 쉽다. 하지만 타입스크립트에서는 약간 다르다. 함수 반환 타입을 undefined로 설정하면, return문을 생략해도 되는 void와는 달리 return문 명시해주어야 한다. undefined를 리턴 타입으로 설정하는 경우는 거의 없다. 
+         
+**콜백함수 타입 설정:** 'const someFunc = (a: number, b: number): number { return a + b; }'와 같은 형식으로 함수의 인자 및 반환값의 타입을 설정할 수 있다. 또한 'const someFunc(a: number, cb: (number) => number) { cb(a); }'와 같은 방식으로 콜백함수의 타입도 설정할 수 있다. ***주의:** 이때 만약 콜백함수의 리턴값을 void로 지정한다면, 콜백함수에 유효한 return문이 있더라도 undefined가 반환된다[return 문을 쓰더라도 오류가 발생하지 않는데, 컴파일 과정에서 해당 return문이 사라진다.]
