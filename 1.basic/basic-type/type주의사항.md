@@ -8,9 +8,10 @@ number1 = '5';
 const number2 = 3;
 add(number1, number2); // 53
 ~~~
-이처럼 초기값 없이 let 변수 선언을 하는 경우에 타입을 명시하지 않는다면,
+이처럼 초기값 없이 let 변수 선언을 하는 경우에 타입을 명시하지 않는다면 any type으로 간주되기에,
 처음 설정했던 타입 외의 타입도 받아들여 예상치 못한 결과가 발생할 수 있다.
 
+따라서 아래와 같이 고쳐준다.
 ~~~ts
 function add(n1: number, n2: number) {
   return n1 + n2
@@ -20,7 +21,6 @@ number = '5'; // 오류 발생
 const number2 = 3;
 add(number1, number2) // 오류 발생
 ~~~
-따라서 이와 같이 고쳐준다.
 
 ~~~ts
 let number1 = 12

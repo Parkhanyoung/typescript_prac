@@ -1,5 +1,5 @@
-type Combinable = number | string; 
-type ConversionDescriptor = 'as-number' | 'as-text';
+type Combinable = number | string; // alias + union
+type ConversionDescriptor = 'as-number' | 'as-text'; // alias + union + literal
 
 function combine(
   input1: Combinable,

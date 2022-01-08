@@ -20,4 +20,4 @@ function addAndDoSomething(num1: number, num2: number, cb: (result: number) => v
 const callback = (a: number): number => {
   return a
 }
-console.log(addAndDoSomething(1, 2, callback));
+console.log(addAndDoSomething(1, 2, callback)); // undefined
